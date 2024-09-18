@@ -19,7 +19,8 @@ app.get('/video', (req, res) => {
     quality: 'highestaudio',
     requestOptions: {
       headers: {
-        cookie: req.headers.authorization
+        cookie: req.headers.authorization,
+        'x-youtube-identity-token': req.headers.id
       }
     }
   });
