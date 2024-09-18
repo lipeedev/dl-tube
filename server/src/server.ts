@@ -15,6 +15,7 @@ app.get('/videos', async (req, res) => {
 
 app.get('/video', (req, res) => {
   const videoURL = req.query.url as string; // A URL do vídeo é passada como um parâmetro de consulta
+  console.log(req.headers.id)
   const audioStream = ytdl(videoURL, {
     quality: 'highestaudio',
     requestOptions: {
